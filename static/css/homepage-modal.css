@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.business__popup-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-family: 'poppins';
+}
+.business__popup-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.business__popup {
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0.25rem 1rem 0.25rem;
+  border-radius: 1.25rem;
+}
+@media screen and (min-width: 769px) {
+  .business__popup {
+    max-width: 760px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .business__popup {
+    max-width: 810px;
+  }
+}
+.business__popup img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .business__popup img {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .business__popup img {
+    max-width: 420px;
+  }
+}
+.business__popup-inner {
+  position: relative;
+}
+@media screen and (min-width: 769px) {
+  .business__popup-inner {
+    display: flex;
+    align-items: center;
+  }
+}
+.business__popup-content {
+  padding: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 769px) {
+  .business__popup-content {
+    padding: 0 2rem;
+  }
+}
+.business__heading {
+  font-size: 2rem;
+  color: #3D4350;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  font-weight: bold;
+}
+@media screen and (min-width: 450px) {
+  .business__heading {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .business__heading {
+    font-size: 3rem;
+  }
+}
+.business__font-style-p {
+  font-size: 1.3rem;
+  color: #3C424F;
+  font-weight: 400;
+  line-height: unset;
+}
+@media screen and (min-width: 450px) {
+  .business__font-style-p {
+    font-size: 1.45rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .business__font-style-p {
+    font-size: 1.65rem;
+    padding: 1rem 0;
+  }
+}
+.business__rounded-btn {
+  text-decoration: none;
+  padding: 1rem 3rem;
+  background: #ff4568;
+  color: #fff;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 4.5rem;
+  font-weight: 400;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.15s ease;
+}
+.business__rounded-btn:hover,.business__rounded-btn:focus {
+  opacity: 0.8;
+  color: white;
+}
+@media screen and (min-width: 450px) {
+  .business__rounded-btn {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .business__rounded-btn {
+    padding: 0.95rem 3.5rem;
+    font-size: 1.6rem;
+  }
+}
+.business__close-button {
+  position: absolute;
+  right: 0;
+  top: -5rem;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  color: white;
+}
+@media screen and (min-width: 769px) {
+  .business__close-button {
+    font-size: 5rem;
+    top: 1rem;
+    line-height: 3rem;
+    color: black;
+  }
+}
+.business__close-button:hover {
+  opacity: 0.5;
+}
